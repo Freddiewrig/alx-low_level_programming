@@ -1,7 +1,8 @@
 #include <stdio.h>
-/* 
- * The program prints "programming is like building a multiligual puzzle"
- * followed by a new line. the main function takes no urgument and returns value of 0.
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
