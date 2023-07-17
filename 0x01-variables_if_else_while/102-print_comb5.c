@@ -5,28 +5,24 @@
  */
 int main(void)
 {
-	int i = 0;
-	int j = 0;
-
-	while (i < 100)
+	int combo;
+	int first_tens, first_ones;
+	
+	for (combo = 0; combo <= 99; combo++)
 	{
-		j = i + 1;
-		while (j < 100)
+		first_tens = combo / 10;
+		first_ones = combo % 10;
+
+		putchar('0' + first_tens);
+		putchar('0' + first_ones);
+
+		if (combo < 99)
 		{
-			putchar(i / 10 + '0');
-			putchar(i % 10 + '0');
-			putchar(' ');
-			putchar(j / 10 + '0');
-			putchar(j % 10 + '0');
-			if (i == 98 && j == 99)
-			{
-				break;
-			}
 			putchar(',');
 			putchar(' ');
-			j++;
 		}
-		i++;
 	}
+
+	putchar('\n');
 	return (0);
 }
