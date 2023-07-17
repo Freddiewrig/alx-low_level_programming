@@ -5,27 +5,27 @@
  */
 int main(void)
 {
-	int i, j, k;
+	int digit1, digit2, digit3;
 
-	for (i = 48; i < 56; i++)
+	for (digit1 = 48; digit1 < 56; digit1++)
 	{
-		for (j = i + 1; j < 57; j++)
+		for (digit2 = digit1 + 1; digit2 < 57; digit2++)
 		{
-			for (k = j + 1; k < 58; k++)
+			for (digit3 = digit2 + 1; digit3 < 58; digit3++)
 			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if (i == 55 && j == 56 && k == 57)
+				putchar(digit1);
+				putchar(digit2);
+				putchar(digit3);
+
+				if (digit1 == 55 && digit2 == 56 && digit3 == 57)
 					continue;
 
-					putchar(44);
-					putchar(32);
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}
 
 	putchar('\n');
-
 	return (0);
 }
