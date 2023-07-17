@@ -22,7 +22,8 @@ int main(void)
 			second_tens = combo2 / 10;
 			second_ones = combo2 % 10;
 
-			if (first_tens < second_tens || (first_tens == second_tens && first_ones < second_ones))
+			if (first_tens < second_tens ||
+					(first_tens == second_tens && first_ones < second_ones))
 			{
 				putchar(first_tens + '0');
 				putchar(first_ones + '0');
