@@ -17,7 +17,6 @@ int main(void)
 		} else
 		{
 			printf("%ld\n", j);
-			break;
 		}
 		next = j + k;
 		j = k;
