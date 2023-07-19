@@ -6,18 +6,20 @@
 int main(void)
 {
 	int counter;
-	unsigned long a = 0;
-	unsigned long b = 1;
-	unsigned long sum = 0;
+	unsigned long int a = 0;
+	unsigned long int b = 1;
+	unsigned long int next = 0;
 
-	printf("%lu", a);
-	for (counter = 0; counter < 97; counter++)
+	while (counter < 98)
 	{
-		printf(", %lu", b);
-		sum = a + b;
+		next = a + b;
 		a = b;
-		b = sum;
+		b = next;
+		printf("%lu", next);
+		if (counter < 97)
+			printf(", ");
+		counter++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
