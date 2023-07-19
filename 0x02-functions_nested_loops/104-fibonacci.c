@@ -6,8 +6,8 @@
 int main(void)
 {
 	int counter;
-	unsigned long a = 1;
-	unsigned long b = 2;
+	unsigned long a = 0;
+	unsigned long b = 1;
 	unsigned long sum = 0;
 
 	printf("%lu", a);
