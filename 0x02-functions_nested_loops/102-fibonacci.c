@@ -11,16 +11,17 @@ int main(void)
 	k = 2;
 	for (i = 1; i <= 50; ++i)
 	{
+		if (i != 1)
+			printf(", ");
+		printf("%ld", j);
+
 		if (j != 20365011075)
 		{
-			printf("%ld, ", j);
-		} else
-		{
-			printf("%ld\n", j);
+			next = j + k;
+			j = k;
+			k = next;
 		}
-		next = j + k;
-		j = k;
-		k = next;
 	}
+	printf("\n");
 	return (0);
 }

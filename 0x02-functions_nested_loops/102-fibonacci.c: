@@ -1,0 +1,13 @@
+
+nacci.c:25:9: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   25 |  printf('\n');
+      |         ^~~~
+      |         |
+      |         int
+In file included from 102-fibonacci.c:1:
+/usr/include/stdio.h:332:43: note: expected ‘const char * restrict’ but argument is of type ‘int’
+  332 | extern int printf (const char *__restrict __format, ...);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+102-fibonacci.c:25:2: warning: format not a string literal and no format arguments [-Wformat-security]
+   25 |  printf('\n');
+      |  ^~~~~~
