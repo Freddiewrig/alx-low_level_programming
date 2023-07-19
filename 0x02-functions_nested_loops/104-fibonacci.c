@@ -5,17 +5,18 @@
  */
 int main(void)
 {
-	unsigned int a = 1, b = 2, temp;
-	int count = 2;
+	int counter;
+	unsigned long a = 1;
+	unsigned long b = 2;
+	unsigned long sum = 0;
 
-	printf("%u, %u", a, b);
-	while (count < 98)
+	printf("%lu", a);
+	for (counter = 0; counter < 97; counter++)
 	{
-		temp = a + b;
-		printf(", %u", temp);
+		printf("%lu", b);
+		sum = a + b;
 		a = b;
-		b = temp;
-		count++;
+		b = sum;
 	}
 	printf("\n");
 	return (0);
