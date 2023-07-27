@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * char *rot13 - encodes a string using rot13
  * @s: pointer to the string
