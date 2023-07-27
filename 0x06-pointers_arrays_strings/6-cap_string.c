@@ -8,21 +8,28 @@
  */
 char *cap_string(char *str)
 {
-	int i;
-	int len = strlen(str);
-	int capitalize_next = 1;
+	int index = 0;
 
-	for (i = 0; i < len; i++)
+	while (str[index])
 	{
-		if (isspace(str[i]) || ispunct(str[i]))
-		{
-			capitalize_next = 1;
-		}
-		else if (capitalize_next)
-		{
-			str[i] = toupper(str[i]);
-			capitalize_next = 0;
-		}
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+		if (str[index - 1] == ',' ||
+				str[index - 1] == ' ' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == '}' ||
+				index == 0)
+			str[index] -= 32;
+		index++;
 	}
 	return (str);
 }
