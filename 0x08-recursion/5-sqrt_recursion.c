@@ -32,7 +32,7 @@ int _sqrt_recursion(int n)
 
 int _sqrt_recursion_new(int n, int low, int high)
 {
-	int mid = (low + high) / 2;
+	long int mid = (low + high) / 2;
 
 	if (mid * mid == n)
 	{
